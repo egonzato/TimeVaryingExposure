@@ -5,13 +5,15 @@ This repository shows how to model time-varying exposures where one of
 the two exposures has a limited coverage. In this specific case the
 study is starts in October, at the beginning of the influential season,
 and ends in June at end of the spring.  
+
+  
 As a result, as the picture shows, once a patient receives the vaccine
 it will be effective until the end of the study. On the other hand, if
 an antibiotic is prescribed to the patient, its coverage will last only
 five day and later the patient will not be exposed to its effect
 anymore.  
   
-<img src="tve.png" width="1061" height="35%" style="display: block; margin: auto;" />
+<img src="tve.png" width="1061" height="25%" style="display: block; margin: auto;" />
 
 #### Intermittent exposure
 

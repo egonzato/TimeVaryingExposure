@@ -11,19 +11,21 @@ output:
 \
 This repository shows how to model time-varying exposures where one of the two exposures has a limited coverage. In this specific case the study is starts in October, at the beginning of the influential season, and ends in June at end of the spring. 
 \
+
+\
 As a result, as the picture shows, once a patient receives the vaccine it will be effective until the end of the study. On the other hand, if an antibiotic is prescribed to the patient, its coverage will last only five day and later the patient will not be exposed to its effect anymore.  
 \
-```{r, echo=FALSE, message=FALSE,warning=FALSE, out.height="35%",fig.align="center"}
+```{r, echo=FALSE, message=FALSE,warning=FALSE, out.height="25%",fig.align="center"}
 library(pacman)
 p_load(mtvc,dplyr,readxl,tidyverse)
-knitr::include_graphics("G:\\Il mio Drive\\journal\\FINALE\\Time Varying Exposure\\tve.png")
+knitr::include_graphics("G:\\Il mio Drive\\journal\\FINALE\\Time Varying Exposure\\TimeVaryingExposure\\tve.png")
 ```
 
 #### Intermittent exposure
 
 ```{r, echo=FALSE, message=FALSE,warning=FALSE}
 # load dataset
-df=read_xlsx("G:\\Il mio Drive\\journal\\FINALE\\Time Varying Exposure\\intermittence.xlsx")
+df=read_xlsx("G:\\Il mio Drive\\journal\\FINALE\\Time Varying Exposure\\TimeVaryingExposure\\intermittence.xlsx")
 ```
 \
 All dates are turned into the `Date` format; in addition if a missing value is found for `datedrug`, which means that no antibiotic was prescribed during the study, the variable `expiredrug` will also have an `NA`, whereas it will have as value the expiry date of the antibiotic, which in this case is `datedrug + 5`, as drug's effect is supposed to last five days.
